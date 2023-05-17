@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>نمودار هواشناسی</title>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+	<canvas id="myChart"></canvas>
+	<script>
+		var ctx = document.getElementById('myChart').getContext('2d');
+		var myChart = new Chart(ctx, {
+			type: 'line',
+			data: {
+				labels: ['روز 1', 'روز 2', 'روز 3', 'روز 4', 'روز 5', 'روز 6', 'روز 7'],
+				datasets: [{
+					label: 'دما',
+					data: [15, 18, 20, 22, 23, 20, 18],
+					fill: false,
+					borderColor: 'rgb(255, 99, 132)',
+					lineTension: 0.1
+				}, {
+					label: 'رطوبت',
+					data: [60, 65, 70, 75, 80, 75, 70],
+					fill: false,
+					borderColor: 'rgb(54, 162, 235)',
+					lineTension: 0.1
+				}]
+			},
+			options: {}
+		});
+	</script>
+</body>
+</html>
